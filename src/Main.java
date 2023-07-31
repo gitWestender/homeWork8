@@ -8,6 +8,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     static void task1() {
@@ -84,5 +85,23 @@ public class Main {
 
         System.out.println(Arrays.toString(newCharArray));
 
+    }
+
+    static void task4() {
+        System.out.printf("\nЗадание %d:\n", counter++);
+
+        int[] intArray = new int[3];
+
+        for (int i = 0; i < intArray.length; i++) {
+            intArray[i] += i + 1;
+        }
+
+        for (int i = 0; i < intArray.length; i++) {
+            if (intArray[i] % 2 != 0) {
+                intArray[i] += 1;
+            }
+        }
+
+        System.out.println(Arrays.toString(intArray));
     }
 }
