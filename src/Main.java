@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     static void task1() {
@@ -14,8 +15,8 @@ public class Main {
 
         int[] intArray = new int[3];
 
-        for (int i : intArray) {
-            i += 1;
+        for (int i = 0; i < intArray.length; i++) {
+            intArray[i] += i + 1;
         }
 
         double[] doubleArray = {1.57, 7.654, 9.986};
@@ -30,9 +31,9 @@ public class Main {
 
         int[] intArray = new int[3];
 
-        for (int i : intArray) {
-            i += 1;
-            System.out.print(i + " ");
+        for (int i = 0; i < intArray.length; i++) {
+            intArray[i] += i + 1;
+            System.out.print(intArray[i] + " ");
         }
 
         System.out.println();
@@ -47,5 +48,41 @@ public class Main {
         char[] charArray = str.toCharArray();
 
         System.out.println(Arrays.toString(charArray));
+    }
+
+    static void task3() {
+        System.out.printf("\nЗадание %d:\n", counter++);
+
+        int[] intArray = new int[3];
+        for (int i = 0; i < intArray.length; i++) {
+            intArray[i] += i + 1;
+        }
+
+        for (int i = intArray.length - 1; i >= 0; i--) {
+            System.out.print(intArray[i] + " ");
+        }
+
+
+        System.out.println();
+        double[] doubleArray = {1.57, 7.654, 9.986};
+        int lenght = doubleArray.length - 1;
+
+        while (lenght >= 0) {
+            System.out.print(doubleArray[lenght] + " ");
+            lenght--;
+        }
+
+
+        System.out.println();
+        String str = "Hello";
+        char[] charArray = str.toCharArray();
+        char[] newCharArray = new char[charArray.length];
+
+        for (int i = 0, j = charArray.length - 1; i < charArray.length; i++, j--) {
+            newCharArray[j] = charArray[i];
+        }
+
+        System.out.println(Arrays.toString(newCharArray));
+
     }
 }
